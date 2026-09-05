@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Techware HRMS",
+    "slug": "techware-hrms-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "techwarehrms",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "local.company.techwarehrms",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Techware HRMS records your location when you punch in or out so your manager can verify attendance."
+      }
+    },
+    "android": {
+      "package": "local.company.techwarehrms",
+      "adaptiveIcon": {
+        "backgroundColor": "#5B5FEF",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Techware HRMS records your location when you punch in or out so your manager can verify attendance."
+        }
+      ]
+    ],
+    "extra": {
+      "apiBaseUrl": "http://10.0.2.2:8000"
+    }
+  }
+}

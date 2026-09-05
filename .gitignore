@@ -1,0 +1,41 @@
+# env
+.env
+.env.local
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# node
+node_modules/
+dist/
+web/dist/
+*.tsbuildinfo
+
+# editors
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# docker
+*.pid
+
+# logs / runtime state
+*.log
+celerybeat-schedule
+
+# os
+.DS_Store
+Thumbs.db
+
+# db/local volumes
+pgdata/
+miniodata/
+
+/net-commander
