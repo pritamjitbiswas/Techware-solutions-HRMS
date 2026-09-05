@@ -1,6 +1,11 @@
 import { appStorage } from "./storage";
 
 const getApiBaseUrl = () => {
+  // Explicit override (e.g. a Vercel deployment pointing at a separately
+  // hosted API) always wins over the local-dev heuristics below.
+  const configured = import.meta.env.VITE_API_BASE_URL;
+  if (configured) return configured.replace(/\/$/, "");
+
   if (typeof window !== "undefined") {
     // If accessed through Nginx reverse proxy (port 8080 or port 80), use relative path
     if (window.location.port === "8080" || window.location.port === "80" || window.location.port === "") {
